@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*****************Leap Year Checker*****************/
+        function isLeapYear(year) {
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                console.log(true)
+            } else {
+                console.log(false)
+            }
+        }
+        isLeapYear(2000)
+        /************************Ticket Pricing****************************/
+        function determineTicketPrice(age) {
+            let price;
+
+            switch (true) {
+                case (age <= 12):
+                    price = 10;
+                    break;
+                case (age >= 13 && age <= 17):
+                    price = 15;
+                    break;
+                case (age >= 18):
+                    price = 20;
+                    break;
+            }
+
+            return price;
+        }
+        console.log(determineTicketPrice(30))
+
+
+        /************************Fibonacci Sequence****************************/
+        function fibonacci(n) {
+            if (n <= 1) {
+                return n;
+            }
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+        console.log(fibonacci(7))
+
+        /************************Palindrome Checker****************************/
+        function isPalindrome(str) {
+            if (str.length <= 1) {
+                return true
+            }
+            if (str[0] === str[str.length - 1]) {
+                return isPalindrome(str.slice(1, str.length - 1))
+
+            } else {
+                return false
+            }
+
+        }
+        console.log(isPalindrome("madam"))
+
+
+    </script>
+</body>
+
+</html>
